@@ -8,8 +8,8 @@
       return [
         this.noteList.notes.map(function(note) {
         return "<li>" + note.text + "</li>"
-      })
-    ].join('')
+      }).join("")
+    ].join("")
     }
   };
 
