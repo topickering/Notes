@@ -7,7 +7,7 @@
     view: function() {
       return [
         this.noteList.notes.map(function(note) {
-        return "<li>" + note.text + "</li>"
+        return "<li>" + note.text.substring(0,20) + "</li>"
       }).join("")
     ].join("")
     }

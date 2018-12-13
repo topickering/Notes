@@ -10,18 +10,26 @@ var assert = {
 };
 
 function testNoteListView() {
-    var nl = new NoteList()
-    nl.addNote('Test')
+    var nl = new NoteList();
+    nl.addNote('Test');
    var nlv = new NoteListView(nl);
    assert.isTrue(nlv.noteList.notes[0].text === 'Test');
 };
 
 function testViewFunction() {
-  var nl = new NoteList()
-  nl.addNote('Test')
+  var nl = new NoteList();
+  nl.addNote('Test');
   var nlv = new NoteListView(nl);
   assert.isTrue(nlv.view() === '<li>Test</li>');
 };
 
+function testViewLength() {
+  var nl = new NoteList();
+  nl.addNote('this is a long string');
+  var nlv = new NoteListView(nl);
+  assert.isTrue(nlv.view() === '<li>this is a long strin</li>')
+};
+
 testNoteListView();
 testViewFunction();
+testViewLength();
