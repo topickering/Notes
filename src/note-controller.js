@@ -10,8 +10,7 @@
     },
 
     changeText: function(text) {
-      var element = document.getElementById('app');
-      element.innerHTML = text;
+      document.getElementById('app').innerHTML = text;
     },
 
     addNote: function(text) {
@@ -21,3 +20,9 @@
 
   exports.NoteController = NoteController
 })(this);
+
+var nl = new NoteList();
+var nlc = new NoteController(nl);
+nlc.addNote('Is it working');
+console.log(document.getElementById('app'));
+nlc.changeText(nlc.view());
