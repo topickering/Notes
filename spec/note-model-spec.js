@@ -3,6 +3,9 @@ var assert = {
     if (!assertionToCheck) {
       throw new Error("Assertion failed: " + assertionToCheck + " is not true");
     }
+    else {
+      console.log('Assertion passed:' + assertionToCheck + ' is true');
+    }
   }
 };
 
