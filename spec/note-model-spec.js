@@ -9,9 +9,15 @@ var assert = {
   }
 };
 
-function testNote() {
+function testNoteText() {
   var note = new Note('Hi');
   assert.isTrue(note.text === 'Hi');
 };
 
-testNote();
+function testNoteId() {
+  var note = new Note('Hi');
+  assert.isTrue(note.id === 0);
+};
+
+testNoteId();
+testNoteText();
