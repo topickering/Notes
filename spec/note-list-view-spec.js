@@ -16,12 +16,12 @@ function testNoteListView() {
    assert.isTrue(nlv.noteList.notes[0].text === 'Test');
 };
 
-function testListFunction() {
+function testViewFunction() {
   var nl = new NoteList()
   nl.addNote('Test')
   var nlv = new NoteListView(nl);
-  assert.isTrue(nlv.list() === '<li>Test</li>');
+  assert.isTrue(nlv.view() === '<li>Test</li>');
 };
 
 testNoteListView();
-testListFunction();
+testViewFunction();

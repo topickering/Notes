@@ -4,7 +4,7 @@
   };
 
   NoteListView.prototype = {
-    list: function() {
+    view: function() {
       return [
         this.noteList.notes.map(function(note) {
         return "<li>" + note.text + "</li>"
