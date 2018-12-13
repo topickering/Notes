@@ -10,14 +10,16 @@ var assert = {
 };
 
 function testNoteListView() {
-   var nlv = new NoteListView();
-   nlv.noteList.addNote('Test')
+    var nl = new NoteList()
+    nl.addNote('Test')
+   var nlv = new NoteListView(nl);
    assert.isTrue(nlv.noteList.notes[0].text === 'Test');
 };
 
 function testListFunction() {
-  var nlv = new NoteListView();
-  nlv.noteList.addNote('Test');
+  var nl = new NoteList()
+  nl.addNote('Test')
+  var nlv = new NoteListView(nl);
   assert.isTrue(nlv.list() === '<li>Test</li>');
 };
 
