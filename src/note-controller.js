@@ -1,5 +1,4 @@
-var element = document.getElementByID('app');
-
 function changeText(text) {
-  element.innerHTML = 'Howdy'
+  var element = document.getElementById('app');
+  element.innerHTML = text;
 };
