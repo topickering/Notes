@@ -1,3 +1,5 @@
 var element = document.getElementByID('app');
 
-console.log(element);
+function changeText(text) {
+  element.innerHTML = 'Howdy'
+};
