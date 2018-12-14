@@ -25,15 +25,20 @@
 
     window.addEventListener('submit', function() {
       event.preventDefault();
-      self.noteList.addNote(event.target[0].value);
+      self.addNote(event.target[0].value);
       self.changeText(self.view());
     }),
 
     window.addEventListener('hashchange', function() {
+      if (window.location.hash == '#home') {
+        self.changeText(self.view());
+      }
+      else {
       var noteId = window.location.hash.split('/')[1];
       var note = self.noteList.findById(noteId);
       var noteView = new SingleNoteView(note);
       self.changeText(noteView.view())
+      }
     })
     }
   };

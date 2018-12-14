@@ -12,7 +12,7 @@ var assert = {
 function testSNVView() {
   var note = new Note('Test');
   var snv = new SingleNoteView(note);
-  assert.isTrue(snv.view() == '<div>Test</div>');
+  assert.isTrue(snv.view() == "<a href='#home'>Home</a><br><br><br><div>Test</div>");
 };
 
 testSNVView();

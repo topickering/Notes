@@ -5,7 +5,11 @@
 
   SingleNoteView.prototype = {
     view: function() {
-      return '<div>' + this.note.text + '</div>'
+      return [
+        "<a href='#home'>Home</a>",
+        "<br>", "<br>", "<br>",
+      '<div>' + this.note.text + '</div>'
+    ].join("")
     }
   };
 
