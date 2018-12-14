@@ -16,20 +16,12 @@ function testNoteListView() {
    assert.isTrue(nlv.noteList.notes[0].text === 'Test');
 };
 
-function testViewFunction() {
-  var nl = new NoteList();
-  nl.addNote('Test');
-  var nlv = new NoteListView(nl);
-  assert.isTrue(nlv.view() === "<li><a href='#notes/4'>Test</a></li>");
-};
-
 function testViewLength() {
   var nl = new NoteList();
   nl.addNote('this is a long string');
   var nlv = new NoteListView(nl);
-  assert.isTrue(nlv.view() === "<li><a href='#notes/5'>this is a long strin</a></li>")
+  assert.isTrue(nlv.view() === "<form><textarea rows=4 cols=50></textarea><p><input type='submit'></input></p></form><li><a href='#notes/4'>this is a long strin</a></li>")
 };
 
 testNoteListView();
-testViewFunction();
 testViewLength();

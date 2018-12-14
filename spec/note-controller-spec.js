@@ -20,7 +20,7 @@ function testControllerView() {
   var nl = new NoteList;
   var nlc = new NoteController(nl);
   nlc.addNote('test');
-  assert.isTrue(nlc.view() === "<li><a href='#notes/7'>test</a></li>")
+  assert.isTrue(nlc.view() === "<form><textarea rows=4 cols=50></textarea><p><input type='submit'></input></p></form><li><a href='#notes/6'>test</a></li>")
 }
 
 testControllerAddNote();

@@ -40,11 +40,10 @@
 
   exports.NoteController = NoteController
 })(this);
-
-var nl = new NoteList();
-var nlc = new NoteController(nl);
-nlc.addNote('Is it working');
-nlc.addNote('I think it is');
-nlc.addNote('Will it cut supercalifragilistic?')
-console.log(document.getElementById('app'));
-nlc.changeText(nlc.view());
+//
+// var nl = new NoteList();
+// var nlc = new NoteController(nl);
+// nlc.addNote('Is it working?');
+// nlc.addNote('I think it is');
+// nlc.addNote('Will it cut supercalifragilistic?')
+// nlc.changeText(nlc.view());
