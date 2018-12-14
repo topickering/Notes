@@ -9,3 +9,6 @@
 
   exports.Note = Note;
 })(this);
+
+
+//consider adding a function which returns the 20 character substring
